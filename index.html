@@ -1,0 +1,228 @@
+<!DOCTYPE html><!-- document type which is html -->
+<html lang="en"><!-- lang is english -->
+<head>
+    <meta charset="UTF-8"><!-- to store the data about the data-->
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0">
+    <title>Krish's Handicraft Store</title>
+    <link rel="stylesheet" href="style.css"><!-- link the html to css-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><!-- link for the box icons -->
+    <script src="http://unpkg.com/scrollreveal"></script><!-- javasc link to scroll the website smoothly-->
+</head>
+<body>
+    <!-- header- section contains logo,list of navbar items,buttons of signin and signup -->
+    <header>
+        <a href="#" class="logo"> <!-- link for the logo--> 
+            <img src="https://media-public.canva.com/VTwOY/MAGSsPVTwOY/1/tl.png" alt="Business Logo"><!--image of the logo--> 
+        </a><!--This is the anchor tag for the logo image-->
+
+        <!-- unordered list items in navabar  and it can be done by ul and li tags, with class called navbar -->
+        <ul class="navbar">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+        </ul>
+       
+        <div class="header-btn"><!--container for header buttons-->
+            <a href="#" class="sign-up">Sign Up</a><!--button links-->
+            <a href="#" class="sign-in">Sign In</a>
+        </div>
+        
+    </header>
+    <section class="Home" id="Home"><!-- section for every items in the navbar first home section -->
+        <div class="text"><!-- container for text in the home section -->
+            <h1><span>Looking</span> to <br><!--To give style to the text-->
+            own a piece of <br> Rajasthan</h1><!--heading tag-->
+            <p>We are here to help you explore the best of Handicraft's from Rajasthan.</p><!--paragraph-->
+            <p>Explore our collection, place an order and get ready to recieve the Rajasthani touch at your home.</p>
+            <div class="app-stores"><!--container for app,play stores -->
+                <img src="img/AppStore.png" alt="AppStore"><!-- image link for app store-->
+                <img src="img/PlayStore.png" alt="Playstore"><!-- image link for play store-->
+            </div>
+        </div>
+        <div class="form-container"><!--container for order form-->
+            <h2>Place an Order</h2><!--heading tag in form container -->
+            <form action="a" method="POST"><!-- used a method called post to include the data in the from and sent to server-->
+                <select name="product" required><!-- to select products and which is required without that form will not close-->
+                    <!-- choosing the product in the given options -->
+                    <option value="" disabled selected>Select Product</option><!--default placeholder-->
+                    <option value="Textile">Traditional Textile</option>
+                    <option value="Pottery">Hand-painted Pottery</option>
+                    <option value="Jewellery">Rajasthani Jewellery</option>
+                    <option value="Furniture">Handicraft Furniture</option>
+                    <option value="Carving">Wooden Carving</option>
+                    <option value="Crockery">Rajasthani Crockery</option>
+                </select>
+                <input type="number" name="quantity" placeholder="Quantity" required min="1"><!--input for quantity-->
+                <input type="text" name="name" placeholder="Your Name" required><!--name to enter-->
+                <input type="email" name="email" placeholder="Your Email" required><!-- email to enter -->
+                <input type="tel" name="phone" placeholder="Your Phone"><!-- phone number -->
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea><!-- just a comment for the prodcts -->
+                <button type="submit">Place Order</button><!-- submits the form once it is filled-->
+            </form>
+        </div>
+    </section>
+    <section class="service" id="service"><!--Service section-->
+        <div class="heading">
+            <span>How to</span><!-- it is a inline element which is used to style the specific part of the text-->
+            <h1>Get the best of Rajasthani Handicrafts delivered at your doorstep.</h1>
+            <!--Main title for serivce section-->
+        </div>
+        <div class="service-container">
+            <div class="box"><!-- class called box for storing the box icons,heading,para-->
+                <i class='bx bx-windows'></i><!-- box icon called windows-->
+                <h2>Browse the Collection</h2><!--For browsing-->
+                <p>Choose what you like from our rich collection listed in the following section</p>
+            </div>
+            <div class="box">
+                <i class="bx bxl-shopify"></i><!-- box icon called windows-->
+                <h2>Place an Order</h2><!--For Placing order-->
+                <p>Place your order by filling up the form in the above section.</p>
+            </div>
+            <div class="box">
+                <i class="bx bx-credit-card"></i><!-- box icon called windows-->
+                <h2>Checkout Online</h2><!--check out-->
+                <p>Pay us online using your preffered card, UPI or payment gateway.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--Product Section-->
+    <div class="products" id="products">
+        <div class="heading">
+            <span>Best Options</span>
+            <h1>Explore our top deals from our Top Handicrafts Collection</h1><!--heading-->
+        </div>
+        <div class="products-container"><!--container for storing imag,heading,para for the product -->
+            <div class="box"><!-- container for product traditional textiles-->
+                <img src="img/1.webp" alt="Traditional Textile"><!-- imag for the product -->
+                <h2>Traditional Textile</h2>
+                <h3>Rs.2400/piece</h3>
+                <a href="#" class="btn">Order Now</a><!-- a button to order -->
+            </div>
+            <div class="box"><!-- container for product hand-painted pottery-->
+                <img src="img/2.webp" alt="Hand-painted Pottery"><!-- imag for the product -->
+                <h2>Hand-painted Pottery</h2>
+                <h3>Rs.400/piece</h3>
+                <a href="#" class="btn">Order Now</a><!-- a button to order -->
+            </div>
+            <div class="box"><!-- container for product rajesthan jewellery-->
+                <img src="img/3.webp" alt="Rajasthani Jewellery"><!-- imag for the product -->
+                <h2>Rajasthani Jewellery</h2>
+                <h3>Rs.48400/piece</h3>
+                <a href="#" class="btn">Order Now</a><!-- a button to order -->
+            </div>
+            <div class="box"><!-- container for product handicraft jewellery -->
+                <img src="img/4.webp" alt="Handicraft Furniture"><!-- imag for the product -->
+                <h2>Handicraft Furniture</h2>
+                <h3>Rs.18400/piece</h3>
+                <a href="#" class="btn">Order Now</a><!-- a button to order -->
+            </div>
+            <div class="box"><!-- container for product wooden carving -->
+                <img src="img/5.webp" alt="Wooden Carving"><!-- imag for the product -->
+                <h2>Wooden Carving</h2>
+                <h3>Rs.4200/piece</h3>
+                <a href="#" class="btn">Order Now</a><!-- a button to order -->
+            </div>
+            <div class="box"><!-- container for product rajesthan crockery -->
+                <img src="img/6.webp" alt="Rajasthani Crockery"><!-- imag for the product -->
+                <h2>Rajasthani Crockery</h2>
+                <h3>Rs.200/piece</h3>
+                <a href="#" class="btn">Order Now</a><!-- a button to order -->
+            </div>
+        </div>
+    </div>
+    <!--About Section-->
+    <section class="about" id="about"><!-- section with about used for navigation and styling-->
+        <div class="heading">
+            <span>About Us</span>
+            <h1>Krish's Handicraft Store</h1><!--Heading-->
+        </div>
+        <div class="about-container"><!--Holding image and text-->
+        <div class="about-img">
+            <img src="img/Krish.webp" alt="Krish's Image">
+        </div>
+        <div class="about-text">
+            <p>Krish is a passionate young entrepreneur from Jaipur, Rajasthan, who is taking his family's rich tradition of handicrafts into the digital world. <br><br>As the first in his family to bring their craft online, Krish combines a love for traditional Rajasthani artistry with a modern approach to business. <br><br>His store offers an exquisite range of handmade products, each reflecting the culture and craftsmanship of Rajasthan, curated for those who appreciate authenticity and heritage. <br><br>Krish is dedicated to sharing his family's story and skills with the world, ensuring that the beauty of Rajasthani handicrafts reaches every corner of the globe.</p>
+            <a href="#" class="btn">Whatsapp at 98765 43210</a><!--link for the phone no -->
+        </div>
+    </div>
+    </section>
+    <section class="reviews" id="reviews"><!--Reviews Section-->
+        <div class="heading">
+            <span>Reviews</span>
+            <h1>What our Customers Say</h1><!--Heading-->
+        </div>
+        <div class="reviews-container"><!-- Container for all review boxes -->
+            <div class="box">
+                <div class="rev-img">
+                    <img src="img/rev1.png" alt="Customer 1"><!--Image of reviewer-->
+                </div>
+                <h2>Advait</h2>
+                <div class="stars"><!--Rating-->
+                    <i class="bx bxs-star"></i><!-- star for the rating from box icons -->
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <!--Customer review-->
+                <p>Krish's store offers such a beautiful variety of handmade crafts. The whole online shopping experience was smooth, and I loved how quickly I received my order. It's great to see tradition meet modern technology.</p>
+            </div>
+            <div class="box">
+                <div class="rev-img">
+                    <img src="img/rev2.png" alt="Customer 2">
+                </div>
+                <h2>Priye and Madhav</h2>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <p>We wanted something authentic for our new home and Krish's Handicraft Store exceeded our expectations. The quality and craftmanship are unmatched and it feels like we brought pieces of Rajasthan into our living room.</p>
+            </div>
+            <div class="box">
+                <div class="rev-img">
+                    <img src="img/rev3.png" alt="Customer 3">
+                </div>
+                <h2>Disha</h2>
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                </div>
+                <p>The handmade pottery I ordered from Krish's store is simply stunning. The vibrant colors and intricate designs really and warmth to my space. It feels like a personal connection to Rajasthani culture.</p>
+            </div>
+        </div>
+    </section>
+    <!--Newsletter section-->
+    <section class="newsletter">
+        <h2>Subscribe to Newsletter</h2><!--Heading-->
+        <div class="box"><!-- Input box for email and subscribe button -->
+            <input type="text" placeholder="Enter your Email..">
+            <a href="#" class="btn">Subscribe</a>
+        </div>
+    </section>
+    <div class="copyright">
+        <p style="text-align: center;">&#169; Krish's Handicraft Store || All Rights Reserved</p>
+    </div>
+    <!-- Social Media Links Section -->
+    <div class="social">
+        <a href="#">
+            <i class="bx bxl-facebook"></i><!--Facebook link--><!--i element is similar to span -->
+        </a>
+        <a href="#">
+            <i class="bx bxl-twitter"></i><!--Twitter link-->
+        </a>
+        <a href="#">
+            <i class="bx bxl-instagram"></i>
+        </a>
+    </div>
+</body>
+</html>

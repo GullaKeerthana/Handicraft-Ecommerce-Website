@@ -1,0 +1,513 @@
+/* Importing the 'Poppins' font from Google Fonts with various weights and styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Global styles applied to all elements */
+* {
+  text-decoration: none; /* Removes underlines from text */
+  list-style: none; /* Removes bullets or numbers from lists */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+  font-family: "Poppins", sans-serif; /* Applies 'Poppins' font */
+  box-sizing: border-box; /* Includes padding and border in element’s total width/height */
+  object-fit: cover; /* Ensures media content covers container */
+  scroll-behavior: smooth; /* Smooth scrolling on anchor navigation */
+  scroll-padding-top: 2rem; /* Padding offset when scrolling */
+}
+
+/* Header section styling */
+header {
+  display: flex; /* Flex layout for spacing elements */
+  justify-content: space-between; /* Space between logo and nav */
+  align-items: center; /* Vertically center items */
+  background-color: #e79223; /* Orange background */
+  color: #fff; /* White text color */
+  padding: 10px 80px; /* Space inside the header */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  position: fixed; /* ✅ ADD */
+  top: 0; /* ✅ ADD */
+  left: 0; /* ✅ ADD */
+  width: 100%; /* ✅ ADD */
+  z-index: 1000;
+}
+
+/* Logo image styling */
+.logo img {
+  width: 50px; /* Fixed width */
+}
+
+/* Navigation bar container */
+.navbar {
+  display: flex; /* Flex layout */
+  gap: 20px; /* Space between links */
+}
+
+/* Styling for navigation links */
+.navbar a {
+  font-weight: 600; /* Semi-bold text */
+  padding: 10px 20px; /* Spacing inside link */
+  font-size: 1rem; /* Font size */
+  color: #fff; /* White text */
+  transition: 0.3s; /* Smooth hover transition */
+  position: relative; /* Needed for pseudo-element */
+}
+
+.navbar li {
+  position: relative; /* keep the list of items in the navbar fixed*/
+}
+
+.navbar a::after {
+  content: ""; /* a element when hovering that list of items */
+  width: 0;
+  height: 3px;
+  background: #ffd1a3;
+  position: absolute; /* moving the the hover affect through the element*/
+  bottom: -4px; /*  position of hover affect */
+  left: 0; /* hovering from left*/
+  transition: 0.5s; /* the transistion of hovering will be 0.5s*/
+}
+
+/* Show underline on hover */
+.navbar a:hover::after {
+  /* giving after it will hover below the item*/
+  width: 100%; /* width of a  underline of a hover*/
+}
+
+/* Container for Sign In / Sign Up buttons */
+.header-btn a {
+  padding: 10px 20px;
+  font-weight: 500;
+  margin-left: 10px;
+  transition: all 0.3s;
+}
+
+/* Sign In button styling */
+.header-btn .sign-in {
+  background-color: #ffd1a3;
+  color: #f0803c;
+  border-radius: 0.5rem;
+  border: 2px solid #ffd1a3;
+  text-wrap: nowrap;
+}
+
+/* Sign In hover effect */
+.header-btn .sign-in:hover {
+  background-color: #f0803c;
+  color: #fff;
+}
+
+/* Sign Up link styling */
+.header-btn .sign-up {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Home section styles */
+.Home {
+  width: 100%;
+  min-height: 100vh;
+  position: relative; /* the position is fixed*/
+  background: url(img/KrishStore.webp);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: cover;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 100px;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Dark overlay on top of background image */
+.Home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1; /*defines the priority of an element  like highliting main part of the text*/
+}
+
+/* Ensure text is above the overlay */
+.text {
+  position: relative;
+  z-index: 2;
+}
+
+/* Heading inside the Home section */
+.text h1 {
+  font-size: 3.5rem;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  color: #f0803c;
+}
+
+/* Span inside the heading */
+.text span {
+  color: #fff;
+}
+
+/* Paragraph inside text */
+.text p {
+  margin: o.5rem 0 1.5 rem;
+  font-size: 1.2rem;
+  max-width: 500px;
+}
+
+/* App store buttons */
+.app-stores {
+  display: flex;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+/* App store images */
+.app-stores img {
+  width: 120px;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Zoom on hover */
+.app-stores img:hover {
+  transform: scale(1.1); /*increses the size*/
+}
+
+/* Form container */
+.form-container {
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin-left: auto;
+  backdrop-filter: blur(10px);
+}
+
+/* Form heading */
+.form-container h2 {
+  color: #f0803c;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+/* Input fields */
+.form-container input,
+.form-container select,
+.form-container textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #f0803c;
+  width: 100%;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+
+/* Submit button */
+.form-container button {
+  padding: 12px;
+  background-color: #f0803c;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+.form-container button:hover {
+  background-color: #dd7621;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Heading section used for titles */
+.heading {
+  text-align: center;
+  margin: 50px 0;
+}
+
+/* Subheading span */
+.heading span {
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #f0803c;
+}
+
+/* Main heading */
+.heading h1 {
+  font-size: 2rem;
+  color: #333;
+  margin: 0.5rem;
+}
+
+/* Services section */
+.service-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 0 50px;
+  margin: 3rem 0;
+}
+
+/* Individual service box */
+.service-container .box {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon in services */
+.service-container .box i {
+  font-size: 40px;
+  padding: 15px;
+  background: whitesmoke;
+  border-radius: 50%;
+  color: #f0803c;
+}
+
+/* Service title */
+.service-container .box h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Service description */
+.service-container .box p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Hover effect */
+.service-container .box:hover {
+  transform: scale(1.05);
+}
+
+/* Icon hover effect */
+.service-container .box .bx:hover {
+  background: #f0803c;
+  color: #fff;
+}
+
+/* Products section */
+.products {
+  padding: 0 100px;
+}
+
+/* Products grid */
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Individual product box */
+.products-container .box {
+  padding: 10px;
+  border-radius: 1rem;
+  box-shadow: 1px 4px 41px rgba(0, 0, 0, 0.2);
+}
+
+/* Product image */
+.products-container .box img {
+  width: 100%;
+  height: 200px;
+  border-radius: 1rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Product title */
+.products-container .box h2 {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Product price or subheading */
+.products-container .box h3 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0.2rem 0 0.5rem;
+  color: #f0803c;
+}
+
+/* Button inside product card */
+.products-container .box .btn {
+  display: flex;
+  justify-content: center;
+  background-color: #474fa0;
+  color: #fff;
+  padding: 10px;
+  border-radius: 0.5rem;
+  margin: 3px;
+}
+
+/* Button hover */
+.products-container .box .btn:hover {
+  background: #f0803c;
+}
+
+/* About section layout */
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  padding: 0 50px;
+  margin-top: 3rem;
+  align-items: center;
+}
+
+/* About image */
+/* the image size depends on the content we give*/
+.about-img img {
+  width: 100%;
+  height: 600px;
+  object-position: center;
+  object-fit: cover;
+  box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* About text */
+.about-text p {
+  margin-bottom: 20px;
+}
+
+/* About button */
+.about-text .btn {
+  background: #0f8163;
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 10px 20px;
+}
+
+/* Reviews section */
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Reviewer image container */
+.rev-img {
+  width: 70px;
+  height: 70px;
+}
+
+/* Reviewer image */
+.rev-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  border: 2px solid #f0903c;
+}
+
+/* Individual review box */
+.reviews-container .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 1px 4px 41px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  padding: 20px;
+}
+
+/* Reviewer's name */
+.reviews-container .box h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0.5rem;
+}
+
+/* Review content */
+.reviews-container .box p {
+  font-style: italic;
+}
+
+/* Star icons */
+.reviews-container .box .stars .bx {
+  color: #f0803c;
+}
+
+/* Newsletter section */
+.newsletter {
+  background: linear-gradient(to top right, #f0803c, #f0903c);
+  display: flex;
+  align-items: center;
+  height: 200px;
+  margin-top: 50px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Newsletter heading */
+.newsletter h2 {
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+/* Newsletter input box */
+.newsletter .box {
+  margin-top: 1rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 4px 8px;
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Newsletter input field */
+.newsletter .box input {
+  border: none;
+  outline: none;
+}
+
+/* Newsletter submit button */
+.newsletter .box .btn {
+  background: #474fa0;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 0.5rem;
+}
+
+/* Copyright section */
+.copywrite {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+
+/* Social media section */
+.social {
+  align-items: center;
+  text-align: center;
+}
+
+/* Social media icons */
+.social .bx {
+  background: #f0803c;
+  color: #474fa0;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 50%;
+}
