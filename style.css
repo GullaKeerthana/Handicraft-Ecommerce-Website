@@ -29,6 +29,15 @@ header {
   width: 100%; /* ✅ ADD */
   z-index: 1000;
 }
+header.sticky {
+  background:  #e79223;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.navbar a.active {
+  color: #ffd1a3;
+}
+
 
 /* Logo image styling */
 .logo img {
