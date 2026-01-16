@@ -15,3 +15,4 @@ It enables users to explore product collections, learn about available services,
 - 🌐 Front-end: HTML
 - 🎨 Styling & Layout: CSS
 - 🔷 Icons: Boxicons
+- ⚙️ Interactivity: JavaScript
